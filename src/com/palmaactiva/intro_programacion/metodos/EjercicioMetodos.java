@@ -4,7 +4,10 @@ public class EjercicioMetodos {
 
     public static void main(String[] args) {
         String nombre = "Fran";
-
+        String resultado = saludar(nombre);
+        resultado = añadirEdad(resultado, 30);
+        resultado = sabeJava(resultado, true);
+        System.out.println("El Resultado es: " + resultado);
     }
 
     public static String saludar(String nombre) {
