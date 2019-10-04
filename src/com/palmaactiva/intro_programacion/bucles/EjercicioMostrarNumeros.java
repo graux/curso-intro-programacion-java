@@ -50,6 +50,16 @@ public class EjercicioMostrarNumeros {
         }
     }
 
+    public static void mostrarNumerosInvertidosWhile(int[] numeros) {
+        int numero;
+        int posicion = numeros.length - 1;
+        while (posicion >= 0) {
+            numero = numeros[posicion];
+            System.out.println("Número: " + numero);
+            posicion--;
+        }
+    }
+
     public static void mostrarNumerosPares(int[] numeros) {
         for (int numero : numeros) {
             if (numero % 2 == 0) {
