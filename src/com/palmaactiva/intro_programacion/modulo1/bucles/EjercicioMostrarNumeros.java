@@ -1,4 +1,4 @@
-package com.palmaactiva.intro_programacion.bucles;
+package com.palmaactiva.intro_programacion.modulo1.bucles;
 
 public class EjercicioMostrarNumeros {
 

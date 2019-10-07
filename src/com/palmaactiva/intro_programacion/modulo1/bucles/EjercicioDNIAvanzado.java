@@ -1,6 +1,6 @@
-package com.palmaactiva.intro_programacion.bucles;
+package com.palmaactiva.intro_programacion.modulo1.bucles;
 
-import com.palmaactiva.intro_programacion.utiles.Terminal;
+import com.palmaactiva.intro_programacion.modulo1.utiles.Terminal;
 
 public class EjercicioDNIAvanzado {
 

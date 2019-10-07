@@ -1,4 +1,4 @@
-package com.palmaactiva.intro_programacion.metodos;
+package com.palmaactiva.intro_programacion.modulo1.metodos;
 
 public class Operaciones {
 

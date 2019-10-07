@@ -1,4 +1,4 @@
-package com.palmaactiva.intro_programacion.estructuras_control;
+package com.palmaactiva.intro_programacion.modulo1.estructuras_control;
 
 import java.text.Normalizer;
 

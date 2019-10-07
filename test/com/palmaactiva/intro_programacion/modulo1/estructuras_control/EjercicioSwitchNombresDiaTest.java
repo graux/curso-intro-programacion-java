@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.palmaactiva.intro_programacion.estructuras_control;
+package com.palmaactiva.intro_programacion.modulo1.estructuras_control;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -13,6 +8,7 @@ import static org.junit.Assert.*;
  * @author usuari
  */
 public class EjercicioSwitchNombresDiaTest {
+
     /**
      * Test of getNumDiaSemana method, of class EjercicioSwitchNombresDia.
      */
@@ -24,5 +20,5 @@ public class EjercicioSwitchNombresDiaTest {
         int result = EjercicioSwitchNombresDia.getNumDiaSemana(nombre);
         assertEquals(expResult, result);
     }
-    
+
 }

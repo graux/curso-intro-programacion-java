@@ -1,4 +1,4 @@
-package com.palmaactiva.intro_programacion.utiles;
+package com.palmaactiva.intro_programacion.modulo1.utiles;
 
 import java.util.Scanner;
 
