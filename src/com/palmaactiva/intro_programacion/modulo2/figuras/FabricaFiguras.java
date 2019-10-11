@@ -2,7 +2,9 @@ package com.palmaactiva.intro_programacion.modulo2.figuras;
 
 import com.palmaactiva.intro_programacion.modulo2.figuras.formas.Cuadrado;
 import com.palmaactiva.intro_programacion.modulo2.figuras.formas.Linea;
+import com.palmaactiva.intro_programacion.modulo2.figuras.formas.Triangulo;
 import com.palmaactiva.intro_programacion.modulo2.figuras.utiles.UtilesFiguras;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
@@ -49,7 +51,7 @@ public class FabricaFiguras {
     }
 
     public void crearFiguraAleatoria() {
-        String[] figuras = new String[]{"linea", "cuadrado"};
+        String[] figuras = new String[]{"linea", "cuadrado", "triangulo"};
         int indice = new Random().nextInt(figuras.length);
         switch (figuras[indice]) {
             case "linea":
@@ -58,6 +60,23 @@ public class FabricaFiguras {
             case "cuadrado":
                 this.crearCuadrado();
                 break;
+            case "triangulo":
+                this.crearTriangulo();
+                break;
         }
+    }
+
+    private void crearTriangulo() {
+        Point centro = UtilesFiguras.getPuntoAleatorio();
+        Random rnd = new Random();
+        int radio = 50 + rnd.nextInt(150);
+        int grados = rnd.nextInt(360);
+        Figura nuevoTriangulo;
+        if (rnd.nextBoolean()) {
+            nuevoTriangulo = new Triangulo(centro, radio, grados);
+        } else {
+            nuevoTriangulo = new Triangulo(centro, radio, grados, Color.RED);
+        }
+        this.addFigura(nuevoTriangulo);
     }
 }
