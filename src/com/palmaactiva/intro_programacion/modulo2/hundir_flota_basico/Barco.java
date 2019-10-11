@@ -1,4 +1,4 @@
-package com.palmaactiva.intro_programacion.modulo2.productos.hundir_flota_basico;
+package com.palmaactiva.intro_programacion.modulo2.hundir_flota_basico;
 
 import java.util.Random;
 

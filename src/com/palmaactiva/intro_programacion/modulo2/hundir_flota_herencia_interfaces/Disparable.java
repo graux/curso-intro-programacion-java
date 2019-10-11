@@ -1,4 +1,4 @@
-package com.palmaactiva.intro_programacion.modulo2.productos.hundir_flota_herencia_interfaces;
+package com.palmaactiva.intro_programacion.modulo2.hundir_flota_herencia_interfaces;
 
 public interface Disparable extends Posicionable, Dibujable {
 
