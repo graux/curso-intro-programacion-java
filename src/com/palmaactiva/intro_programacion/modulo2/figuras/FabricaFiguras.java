@@ -1,7 +1,9 @@
 package com.palmaactiva.intro_programacion.modulo2.figuras;
 
 import com.palmaactiva.intro_programacion.modulo2.figuras.formas.Cuadrado;
+import com.palmaactiva.intro_programacion.modulo2.figuras.formas.Estrella;
 import com.palmaactiva.intro_programacion.modulo2.figuras.formas.Linea;
+import com.palmaactiva.intro_programacion.modulo2.figuras.formas.ParametrosFiguraInvalidosException;
 import com.palmaactiva.intro_programacion.modulo2.figuras.formas.Triangulo;
 import com.palmaactiva.intro_programacion.modulo2.figuras.utiles.UtilesFiguras;
 import java.awt.Color;
@@ -51,7 +53,7 @@ public class FabricaFiguras {
     }
 
     public void crearFiguraAleatoria() {
-        String[] figuras = new String[]{"linea", "cuadrado", "triangulo"};
+        String[] figuras = new String[]{"linea", "cuadrado", "triangulo", "estrella"};
         int indice = new Random().nextInt(figuras.length);
         switch (figuras[indice]) {
             case "linea":
@@ -62,6 +64,9 @@ public class FabricaFiguras {
                 break;
             case "triangulo":
                 this.crearTriangulo();
+                break;
+            case "estrella":
+                this.crearEstrella();
                 break;
         }
     }
@@ -78,5 +83,20 @@ public class FabricaFiguras {
             nuevoTriangulo = new Triangulo(centro, radio, grados, Color.RED);
         }
         this.addFigura(nuevoTriangulo);
+    }
+
+    private void crearEstrella() {
+        Point centro = UtilesFiguras.getPuntoAleatorio();
+        Random rnd = new Random();
+        int radioExterior = 50 + rnd.nextInt(150);
+        int radioInterior = (radioExterior / 2) - (rnd.nextInt(10));
+        int grados = rnd.nextInt(360);
+        int picos = 5 + rnd.nextInt(3);
+        try {
+            Figura nuevoTriangulo = new Estrella(centro, radioExterior, radioInterior, picos, grados);
+            this.addFigura(nuevoTriangulo);
+        } catch (ParametrosFiguraInvalidosException pfie) {
+            System.out.println("Error: " + pfie.getMessage());
+        }
     }
 }
