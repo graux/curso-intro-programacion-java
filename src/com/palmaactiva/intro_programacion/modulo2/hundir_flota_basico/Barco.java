@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Barco {
 
-    private Celda[] celdas;
+    private final Celda[] celdas;
 
     public Barco(int numCeldas) {
         // Inicializamos un array de celdas de la longitud demandada
