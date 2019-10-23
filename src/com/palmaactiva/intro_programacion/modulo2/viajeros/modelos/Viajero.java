@@ -71,4 +71,12 @@ public class Viajero {
         }
         return false;
     }
+
+    public boolean esMedioTransporteValido() {
+        MedioTransporte mt = this.elViaje.getMedioTransporte();
+        if (this.elViaje.kmViaje < mt.getAutonomia()) {
+            return this.elViaje.getPrecioViaje() <= this.presupuestoViaje;
+        }
+        return false;
+    }
 }
